@@ -18,7 +18,7 @@ function debounce(fun, delay) {
         let _args = args
         clearTimeout(fun.id)
         fun.id = setTimeout(function () {
-            fun.call(that, _args)
+            fun.apply(that, _args)
         }, delay)
     }
 }
