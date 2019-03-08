@@ -26,7 +26,19 @@
 19. 职业规划（没有怎么答好）
 20. 实现两个方法，例如对'welcome cvte'，一个方法实现加密，另一个方法实现解密
 21. 怎么判断单向链表是否有环？
+_____
 
+需要注意的是，构造函数不能使用箭头函数，如果这样做会抛出异常。
+
+因为使用箭头函数后this会指定闭合的当前上下文，而当函数做为构造器的时候，this又会指向生成的实例， 这个造成歧义。
+```
+var Message = (text) => {  
+  this.text = text;
+};
+// Throws "TypeError: Message is not a constructor"
+var helloMessage = new Message('Hello World!'); 
+```
+____
 总结与反思： 
 1. 项目难点要再总结一下
 2. 性能优化也要总结一下
