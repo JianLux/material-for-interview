@@ -9,7 +9,7 @@
 ```
 overflow: hidden;
 text-overflow: ellipsis;
-white
+white-space: nowrap;
 ```
 
 多行：(适用于WebKit浏览器及移动端)
